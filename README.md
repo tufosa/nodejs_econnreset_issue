@@ -13,7 +13,7 @@ $ node src/receiver(-tls).js
 $ python3 src/sender(-tls).js
 ```
 
-You will receive 2 types of output in the receiver console:
+You will receive 2 types of output in the receiver's console:
 
 A- The error-free output:
 ```
