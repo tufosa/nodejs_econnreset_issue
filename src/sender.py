@@ -16,7 +16,7 @@ def close():
 
 def send():
   global mysocket, msg
-  for x in range(1, 1000000):
+  for x in range(1, 1000001):
     mysocket.send(msg.encode('utf-8'))
     if x%100000 == 0:
       close()

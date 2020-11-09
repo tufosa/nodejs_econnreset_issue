@@ -23,6 +23,8 @@ def connect_ssl():
 
 def close():
   global mysocket
+  # mysocket.shutdown(socket.SHUT_RDWR)
+  # mysocket.unwrap()
   mysocket.close()
   mysocket = None
 
