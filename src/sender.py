@@ -11,6 +11,7 @@ def connect():
 
 def close():
   global mysocket
+  # mysocket.shutdown(socket.SHUT_RDWR)
   mysocket.close()
   mysocket = None
 
