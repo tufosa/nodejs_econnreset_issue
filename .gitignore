@@ -1,6 +1,9 @@
 # Vim
 *.swp
 
+# Java
+*.class
+
 # Logs
 logs
 *.log
