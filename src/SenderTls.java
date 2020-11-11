@@ -3,7 +3,7 @@ import java.io.*;
 import javax.net.ssl.*;
 import java.security.KeyStore;
 
-public class SenderJava {
+public class SenderTls {
 
   public static final String MSG = new String(new char[10])
     .replace("\0","Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
@@ -11,7 +11,7 @@ public class SenderJava {
   protected SSLSocket socket;
   protected PrintWriter writer;
 
-  public SenderJava() throws IOException {
+  public SenderTls() throws IOException {
     try {
         SSLContext ctx;
         KeyManagerFactory kmf;
@@ -61,7 +61,7 @@ public class SenderJava {
 
   public static void main(String[] args) throws Exception {
     try {
-      SenderJava sender = new SenderJava();
+      SenderTls sender = new SenderTls();
       sender.connect();
       sender.send();
       sender.close();
