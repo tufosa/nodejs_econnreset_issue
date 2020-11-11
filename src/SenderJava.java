@@ -3,7 +3,7 @@ import java.io.*;
 import javax.net.ssl.*;
 import java.security.KeyStore;
 
-public class SSLSocketClient {
+public class SenderJava {
 
   public static final String MSG = new String(new char[10])
     .replace("\0","Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
@@ -11,7 +11,7 @@ public class SSLSocketClient {
   protected SSLSocket socket;
   protected PrintWriter writer;
 
-  public SSLSocketClient() throws IOException {
+  public SenderJava() throws IOException {
     try {
         SSLContext ctx;
         KeyManagerFactory kmf;
@@ -61,10 +61,10 @@ public class SSLSocketClient {
 
   public static void main(String[] args) throws Exception {
     try {
-      SSLSocketClient client = new SSLSocketClient();
-      client.connect();
-      client.send();
-      client.close();
+      SenderJava sender = new SenderJava();
+      sender.connect();
+      sender.send();
+      sender.close();
     } catch (Exception e) {
       e.printStackTrace();
     }
