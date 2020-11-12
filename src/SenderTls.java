@@ -33,7 +33,6 @@ public class SenderTls {
       }
   }
 
-  public SSLSocketFactory getFactory() { return factory; }
 
   public void connect() throws IOException {
     socket = (SSLSocket)factory.createSocket("127.0.0.1", 6514);
