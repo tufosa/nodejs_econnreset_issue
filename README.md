@@ -124,9 +124,8 @@ The following table show the output obtained in different cases:
 
 Besides python, there is also an implementation of the sender in node.js and in 
 Java. The node.js sender works "out of the box", but for the Java
-implementation, there are some points to take into account:
-
-1.- Server certs and CA chain needs to be added to the JVM's cacerts:
+implementation, server certs and CA chain needs to be added to the JVM's
+cacerts keystore:
 ```
 keytool -trustcacerts -keystore "/jdk/jre/lib/security/cacerts" -storepass changeit -importcert -alias <alias> -file <path-to-crt-file>
 ```
