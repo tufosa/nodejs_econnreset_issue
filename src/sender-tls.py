@@ -13,7 +13,9 @@ msg = "Lorem ipsum dolor sit amet, consectetur adipiscing elit." * 10
 def connect_ssl():
   global mysocket
   mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-  context = ssl.create_default_context(cafile=chain)
+  context = ssl.SSLContext(ssl.PROTOCOL_TLS)
+  # context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+  context.load_verify_locations(cafile=chain)
   context.check_hostname = False
   context.verify_mode = ssl.CERT_NONE
   context.set_ciphers("DEFAULT@SECLEVEL={!s}".format(0))
